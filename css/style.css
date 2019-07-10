@@ -327,6 +327,7 @@ button:focus {
       .home_banner_area .banner_inner .banner_content .banner_map_img {
         text-align: right; }
 
+
 .blog_banner {
   min-height: 780px;
   position: relative;
@@ -939,7 +940,12 @@ button:focus {
       opacity: .5; }
 @media (max-width: 991px) {
   .single-post-area .sidebar-widgets {
-    padding-bottom: 0px; } }
+    padding-bottom: 0px; }
+
+    .home_banner_area .banner_inner .container .row .col-lg-6:first-child {
+      order:2; }
+  }
+
 
 .comments-area {
   background: #fafaff;
