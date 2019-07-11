@@ -410,6 +410,14 @@ button:focus {
           margin-right: 0px; }
           .banner_area .banner_inner .banner_content .page_link a:last-child:before {
             display: none; }
+            hr {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                border-top: 4px solid #006699;
+                margin: 15px 45px 25px;
+                padding: 0;
+                max-width: 250px;
+            }
 
 /* End Home Banner Area css
 ============================================================================================ */
