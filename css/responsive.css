@@ -332,6 +332,7 @@
 		padding-bottom: 70px;
 	}
 	.home_banner_area .banner_inner .home_left_img {
+    text-align: center;
 		/* display: none; */
     margin-bottom: 20px;
 	}
