@@ -146,6 +146,8 @@ button:focus {
     border-radius: 0px; }
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
+        .header_area .navbar .nav .nav-item a:hover {
+            color: #8490ff; }
       .header_area .navbar .nav .nav-item .nav-link {
         font: 500 12px/100px "Roboto", sans-serif;
         text-transform: uppercase;
@@ -210,11 +212,16 @@ button:focus {
             .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
               background: #8490ff;
               color: #fff; }
+            .header_area .navbar-brand img {
+                border-radius: 20%;
+				width: 70px;
+				height: 70px;
+            }
         @media (min-width: 992px) {
           .header_area .navbar .nav .nav-item.submenu:hover ul {
             visibility: visible;
             opacity: 1;
-            top: 100%; } }
+            top: 80%; } }
         .header_area .navbar .nav .nav-item.submenu:hover ul .nav-item {
           margin-top: 0px; }
       .header_area .navbar .nav .nav-item:last-child {
@@ -297,6 +304,11 @@ button:focus {
     width: 100%; padding-top: 90px; }
     .home_banner_area .banner_inner .home_left_img {
       padding-top: 40px; }
+        .home_banner_area .banner_inner .home_left_img img {
+            width: 366px;
+            height: 366px;
+            border-radius: 30%;
+        }
     .home_banner_area .banner_inner .col-lg-6 {
       vertical-align: middle;
       align-self: center; }
@@ -1860,16 +1872,17 @@ h6 {
   padding-left: 30px;
   line-height: 1.82em !important; }
 
-.unordered-list li:before {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border: 3px solid #f8b600;
-  background: #fff;
-  top: 4px;
-  left: 0;
-  border-radius: 50%; }
+    .unordered-list li:before {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border: 3px solid #006699;
+        background: #fff;
+        top: 7px;
+        left: 0;
+        border-radius: 50%;
+    }
 
 .ordered-list {
   margin-left: 30px; }
@@ -2784,13 +2797,43 @@ h6 {
         background-image: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
         background-image: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
         background-image: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%); }
-
+      .welcome_inner img {
+          border: 1px solid #D3D3D3;
+          border-radius: 10px;
+          max-width: 100%;
+          max-height: 100%;
+      }
+	  
+	  .zoom	{
+		  transition: transform .2s;
+	  }
+		.zoom:hover {
+		  -ms-transform: scale(1.1); /* IE 9 */
+		  -webkit-transform: scale(1.1); /* Safari 3-8 */
+		  transform: scale(1.1); 
+		}
+        .welcome_inner .awards_img {
+            padding: 5px 0%;
+        }
+		.modal {
+			top: 100px;
+		}
+		body.modal-open {
+			overflow: auto
+		}
+		.modal,body.modal-open {
+			padding-right: 0!important;
+		}
 /* End Welcome Area css
 ============================================================================================ */
 /* Feature Area css
 ============================================================================================ */
 .feature_area {
-  background: #f9f9ff; }
+    background: #f9f9ff;
+}
+.feature_area a {
+    color: inherit;
+}
   .feature_area.feature_tow {
     background: #fff; }
     .feature_area.feature_tow .feature_item {
@@ -2806,7 +2849,9 @@ h6 {
   border-radius: 10px;
   transition: all 300ms linear 0s;
   background: #fff;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  cursor: pointer;
+}
   .feature_item i {
     margin-bottom: 35px;
     display: block; }
@@ -2833,7 +2878,8 @@ h6 {
     .feature_item:hover i:before {
       background: linear-gradient(to right, #8490ff 0%, #62bdfc 70%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+    }
 
 /* End Feature Area css
 ============================================================================================ */
@@ -2856,7 +2902,10 @@ h6 {
       margin-right: 0px; }
     .projects_fillter .filter li.active a {
       color: #8490ff; }
-
+.projects_area .banner_inner {
+	width: 100%;
+    padding-top: 90px;
+}
 .projects_inner {
   margin-bottom: -30px; }
 
@@ -2892,7 +2941,8 @@ h6 {
       cursor: pointer; }
     .projects_item .projects_text p {
       margin-bottom: 0px;
-      font-size: 14px; }
+      font-size: 14px; 
+	  color: #777777; }
   .projects_item:hover:before {
     opacity: 1; }
   .projects_item:hover .projects_text h4 {
@@ -2911,17 +2961,17 @@ h6 {
   font-size: 14px; }
   .portfolio_details_inner p:last-child {
     margin-bottom: 0px; }
-.portfolio_details_inner .portfolio_right_text {
-  padding-left: 98px; }
+/*.portfolio_details_inner .portfolio_right_text {
+  padding-left: 98px; }*/
   .portfolio_details_inner .portfolio_right_text h4 {
     color: #222222;
     font-size: 21px;
     text-transform: uppercase;
-    margin-bottom: 18px; }
+    margin-bottom: 25px; }
   .portfolio_details_inner .portfolio_right_text p {
     margin-bottom: 25px;
     font-size: 14px; }
-  .portfolio_details_inner .portfolio_right_text .list li {
+  .portfolio_details_inner .portfolio_right_text .list li, .portfolio_details_inner .portfolio_right_text li {
     margin-bottom: 7px;
     color: #777777;
     font-weight: normal;
@@ -2930,12 +2980,15 @@ h6 {
       font-size: 14px;
       color: #222222;
       font-weight: 500;
-      width: 97px;
+      width: 150px;
       display: inline-block; }
     .portfolio_details_inner .portfolio_right_text .list li:last-child {
       margin-bottom: 0px; }
     .portfolio_details_inner .portfolio_right_text .list li i {
       color: #f1cd09; }
+    .portfolio_details_inner .portfolio_right_text li b {
+      font-weight: bolder;
+	  color: inherit; }
 
 /* End Portfolio Details Area css
 ============================================================================================ */
@@ -2997,6 +3050,9 @@ h6 {
 .footer_area {
   background: #000410; }
 
+.footer_inner div {
+text-align: center; }
+
 .f_title {
   margin-bottom: 10px; }
   .f_title h3 {
@@ -3025,7 +3081,11 @@ h6 {
     line-height: 24px;
     font-family: "Roboto", sans-serif;
     color: #777777;
-    margin-bottom: 15px; }
+    margin-bottom: 0px; }
+	.news_widget a {
+	color: #777777; }
+	.news_widget b {
+	color: #fff; }
   .news_widget .input-group input {
     height: 40px;
     background: #fff;
@@ -3099,3 +3159,45 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+/*============== Skill Areas css ==============  */
+html {
+    scroll-behavior: smooth;
+}
+.skill_area .banner_inner, .portfolio_area .banner_inner {
+    width: 100%;
+    padding-top: 90px;
+}
+.skill_area p {
+    margin-bottom: 75px;
+}
+/*============== Skill Areas End css ================*/
+
+/*============== Contact css ==============  */
+.contact_info p {
+    margin-bottom: 40px;
+}
+/*============== Contact End css ================*/
+
+/*============== Portfolio css ==============  */
+.portfolio_details_inner .portfolio_right_text p {
+    margin-top: 25px;
+}
+.portfolio .section-top-border {
+    padding: 35px 0;
+    border-top: 1px dotted #eee;
+}
+/*============== Portfolio End css ================*/
+
+/*============== Parallax Effect css ==============  */
+.technologies .overlay {
+      background: url(../img/technologies.jpg) no-repeat scroll center center;
+      opacity: .5;
+      height: 125%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      z-index: -1; }
+	  
+/*============== Parallax Effect End css ================*/
